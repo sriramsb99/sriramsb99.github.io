@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 950px;
+      max-width: 900px;
       margin: 50px auto;
       padding: 0 24px;
       line-height: 1.7;
@@ -39,23 +39,12 @@
       color: #ffffff;
     }
 
-    h2 {
-      font-size: 1.15rem;
-      margin-bottom: 0.2em;
-      color: #ffffff;
-    }
-
-    .paper {
-      margin-bottom: 2em;
-    }
-
-    .meta {
-      color: #b0b0b0;
-      margin-bottom: 0.6em;
-    }
-
-    ul {
+    .pub-list {
       padding-left: 1.3em;
+    }
+
+    .pub-list li {
+      margin-bottom: 1.1em;
     }
 
     a {
@@ -74,56 +63,52 @@
 <body>
   <nav>
     <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
     <a href="publications.html">Publications</a>
-    <a href="ongoing-research.html">Ongoing Research</a>
     <a href="cv.html">CV</a>
     <a href="contact.html">Contact</a>
   </nav>
 
   <h1>Publications</h1>
 
-  <div class="paper">
-    <h2>Information-Theoretic Scaling Laws of Neural Quantum States</h2>
-    <div class="meta">With Y. Lu, D. Rathore, D. Luo, March 2026, <a href="https://arxiv.org/pdf/2603.23468" target="_blank">arXiv</a>, Phys. Rev. Lett. to appear</div>
-    <ul>
-      <li>Systematic study of the representation power of Transformer and RNNs applied to quantum state learning.</li>
-      <li>Prove superiority of neural networks over tensor networks for states with (sub-)volume dephased mutual information.</li>
-      <li>Derive information theoretic scaling laws for a broad set of many-body systems which have (sub-)volume dephased mutual information and benchmark representation power of neural networks.</li>
-      <li>Detailed examples studied include stabilizer states, Rokhsar Kivelson states, toric code, and finite-temperature transverse-field Ising model.</li>
-    </ul>
-  </div>
+  <ol class="pub-list">
+    <li>
+      <strong>Information-Theoretic Scaling Laws of Neural Quantum States</strong><br>
+      Y. Lu, D. Rathore, D. Luo, S. Bharadwaj.<br>
+      March 2026.
+      <a href="https://arxiv.org/pdf/2603.23468" target="_blank">arXiv</a>.
+      Phys. Rev. Lett. to appear.
+    </li>
 
-  <div class="paper">
-    <h2>Hamiltonian Formulation of Lattice QED3 with One and Two Flavors of Wilson Fermions: Topological Structure and Response</h2>
-    <div class="meta">With D. Luo, L. Funcke, et al., March 2026, <a href="https://arxiv.org/pdf/2603.05616" target="_blank">arXiv</a>, Phys. Rev. D to appear</div>
-    <ul>
-      <li>Non-trivially extends the analysis of <a href="https://arxiv.org/abs/2504.21828" target="_blank">arXiv:2504.21828</a> to include dynamical U(1) gauge fields.</li>
-      <li>Investigates classically non-simulable regime via Hamiltonian formulation.</li>
-      <li>Groundwork for quantum simulations.</li>
-      <li>Analyze topological phase diagram at finite density with one and two fermion flavors. This cannot be done via classical simulations due to sign problem.</li>
-      <li>Maps topological phase diagram at finite gauge coupling.</li>
-      <li>Identifies order parameters for topological phase transitions in near-term quantum simulations via VQE.</li>
-    </ul>
-  </div>
+    <li>
+      <strong>Hamiltonian Formulation of Lattice QED<sub>3</sub> with One and Two Flavors of Wilson Fermions: Topological Structure and Response</strong><br>
+      D. Luo, L. Funcke, et al., S. Bharadwaj.<br>
+      March 2026.
+      <a href="https://arxiv.org/pdf/2603.05616" target="_blank">arXiv</a>.
+      Phys. Rev. D to appear.
+    </li>
 
-  <div class="paper">
-    <h2>A Path to Quantum Simulations of Topological Phases: (2+1)D Quantum Electrodynamics with Wilson Fermions</h2>
-    <div class="meta">With D. Luo, L. Funcke, et al., April 2025, <a href="https://arxiv.org/abs/2504.21828" target="_blank">arXiv</a>, Phys. Rev. Lett. to appear</div>
-    <ul>
-      <li>Establish that staggered fermion classical and quantum simulations fail to simulate novel topological phases.</li>
-      <li>Propose an alternative formulation with Wilson fermions, which faithfully captures topological phases.</li>
-      <li>Proof of concept exact diagonalization to show feasibility of simulation on near-term quantum devices.</li>
-    </ul>
-  </div>
+    <li>
+      <strong>A Path to Quantum Simulations of Topological Phases: (2+1)D Quantum Electrodynamics with Wilson Fermions</strong><br>
+      D. Luo, L. Funcke, et al., S. Bharadwaj.<br>
+      April 2025.
+      <a href="https://arxiv.org/abs/2504.21828" target="_blank">arXiv</a>.
+      Phys. Rev. Lett. to appear.
+    </li>
 
-  <div class="paper">
-    <h2>Non-invertible Defects on the Worldsheet</h2>
-    <div class="meta">With P. Niro and K. Roumpedakis, September 2024, Published in <a href="https://inspirehep.net/files/358fd350813bf31db1d761b20aa7f06e" target="_blank"><em>JHEP</em> 03 (2025) 164</a></div>
-  </div>
+    <li>
+      <strong>Non-invertible Defects on the Worldsheet</strong><br>
+      P. Niro, K. Roumpedakis, S. Bharadwaj.<br>
+      September 2024.
+      Published in <a href="https://inspirehep.net/files/358fd350813bf31db1d761b20aa7f06e" target="_blank"><em>JHEP</em> 03 (2025) 164</a>.
+    </li>
 
-  <div class="paper">
-    <h2>Approaching Argyres-Douglas Theories</h2>
-    <div class="meta">With Eric D'Hoker, June 2024, Published in <a href="https://inspirehep.net/files/8282ebe3abb5433e0dc15f4261863173" target="_blank"><em>JHEP</em> 06 (2024) 082</a></div>
-  </div>
+    <li>
+      <strong>Approaching Argyres-Douglas Theories</strong><br>
+      Eric D'Hoker, S. Bharadwaj.<br>
+      June 2024.
+      Published in <a href="https://inspirehep.net/files/8282ebe3abb5433e0dc15f4261863173" target="_blank"><em>JHEP</em> 06 (2024) 082</a>.
+    </li>
+  </ol>
 </body>
 </html>
