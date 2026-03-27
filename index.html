@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 950px;
+      max-width: 900px;
       margin: 50px auto;
       padding: 0 24px;
       line-height: 1.7;
@@ -15,206 +15,57 @@
       background: #fff;
     }
 
+    nav {
+      margin-bottom: 2.5em;
+      padding-bottom: 0.8em;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav a {
+      margin-right: 18px;
+      text-decoration: none;
+      color: #0b57d0;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     h1 {
-      font-size: 2.4rem;
+      font-size: 2.5rem;
       margin-bottom: 0.15em;
     }
 
     .subtitle {
       color: #666;
-      margin-bottom: 1.5em;
       font-size: 1.05rem;
-    }
-
-    h2 {
-      margin-top: 2.2em;
-      margin-bottom: 0.6em;
-      font-size: 1.35rem;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 0.25em;
-    }
-
-    h3 {
-      margin-bottom: 0.25em;
-      font-size: 1.05rem;
+      margin-bottom: 1.8em;
     }
 
     p {
-      margin-top: 0.4em;
-      margin-bottom: 0.8em;
-    }
-
-    ul {
-      padding-left: 1.3em;
-      margin-top: 0.4em;
-    }
-
-    li {
-      margin-bottom: 0.55em;
-    }
-
-    a {
-      color: #0b57d0;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .paper {
-      margin-bottom: 1.6em;
-    }
-
-    .paper-meta {
-      color: #555;
-      margin-top: 0.1em;
-      margin-bottom: 0.5em;
-    }
-
-    .intro {
-      margin-bottom: 1.5em;
+      margin-bottom: 1em;
     }
   </style>
 </head>
 <body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="publications.html">Publications</a>
+    <a href="ongoing-research.html">Ongoing Research</a>
+    <a href="cv.html">CV</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
   <h1>Sriram Bharadwaj</h1>
   <p class="subtitle">PhD Candidate in Theoretical Physics at UCLA</p>
 
-  <div class="intro">
-    <p>
-     I am a PhD Candidate in Theoretical Physics at UCLA working under the supervision of Eric D’Hoker and Leo Zhou. 
-    </p>
-    <p>
-      My research sits at the intersection of Hamiltonian lattice gauge theory and quantum computation. I am broadly interested in reformulating lattice gauge theories in ways that make them more amenable to quantum simulation, and in developing quantum algorithms and simulation methods for classically hard problems. My recent work has included VQE simulations for lattice gauge theory, QAOA-inspired methods for continuous optimization, and adiabatic state preparation. Earlier in my PhD, I worked on theoretical aspects of quantum field theory and string theory. 
-      </p>
-  </div>
-  
-  <h2>Research Interests</h2>
-  <ul>
-    <li>
-      <strong>Lattice gauge theory and quantum computation.</strong>
-      Developing Hamiltonian formulations of lattice gauge theories for efficient
-      quantum simulation in sign-problem-affected regimes, including work on
-      (2+1)D QED.
-    </li>
-    <li>
-      <strong>Quantum state learning.</strong>
-      Applying machine learning methods to quantum many-body systems, while using
-      tools from physics and information theory to analyze the representation
-      power of neural-network ansätze.
-    </li>
-    <li>
-      <strong>Quantum algorithms.</strong>
-      Developing efficient quantum algorithms for optimization problems and for
-      the simulation of many-body systems on quantum hardware, including ongoing
-      work on CV-QAOA.
-    </li>
-    <li>
-      <strong>Quantum simulations of many-body systems.</strong>
-      Studying many-body physics that is inaccessible to classical computation
-      through quantum simulation methods, including ongoing work on VQE for 
-      lattice gauge theory.
-    </li>
-    <li>
-      <strong>State preparation.</strong>
-      Developing efficient state-preparation algorithms for many-body quantum
-      simulations, including lattice gauge theories and condensed matter systems,
-      with ongoing work on adiabatic state preparation for unbounded Hamiltonians.
-    </li>
-  </ul>
+  <p>
+    I am a PhD Candidate in Theoretical Physics at UCLA working under the supervision of Eric D’Hoker and Leo Zhou.
+  </p>
 
-  <h2>Publications</h2>
-
-  <div class="paper">
-    <h3>Information-Theoretic Scaling Laws of Neural Quantum States</h3>
-    <p class="paper-meta">
-      With Y. Lu, D. Rathore, D. Luo, March 2026,
-      <a href="https://arxiv.org/pdf/2603.23468" target="_blank">arXiv</a>,
-      Phys. Rev. Lett. to appear
-    </p>
-    <ul>
-      <li>Systematic study of the representation power of Transformer and RNNs applied to quantum state learning.</li>
-      <li>Prove superiority of neural networks over tensor networks for states with (sub-)volume dephased mutual information.</li>
-      <li>Derive information theoretic scaling laws for a broad set of many-body systems which have (sub-)volume dephased mutual information and benchmark representation power of neural networks.</li>
-      <li>Detailed examples studied include stabilizer states, Rokhsar Kivelson states, toric code, and finite-temperature transverse-field Ising model.</li>
-    </ul>
-  </div>
-
-  <div class="paper">
-    <h3>Hamiltonian Formulation of Lattice QED<sub>3</sub> with One and Two Flavors of Wilson Fermions: Topological Structure and Response</h3>
-    <p class="paper-meta">
-      With D. Luo, L. Funcke, et al., March 2026,
-      <a href="https://arxiv.org/pdf/2603.05616" target="_blank">arXiv</a>,
-      Phys. Rev. D to appear
-    </p>
-    <ul>
-      <li>Non-trivially extends the analysis of <a href="https://arxiv.org/abs/2504.21828" target="_blank">arXiv:2504.21828</a> to include dynamical U(1) gauge fields.</li>
-      <li>Investigates classically non-simulable regime via Hamiltonian formulation.</li>
-      <li>Groundwork for quantum simulations.</li>
-      <li>Analyze topological phase diagram at finite density with one and two fermion flavors. This cannot be done via classical simulations due to sign problem.</li>
-      <li>Maps topological phase diagram at finite gauge coupling.</li>
-      <li>Identifies order parameters for topological phase transitions in near-term quantum simulations via VQE.</li>
-    </ul>
-  </div>
-
-  <div class="paper">
-    <h3>A Path to Quantum Simulations of Topological Phases: (2+1)D Quantum Electrodynamics with Wilson Fermions</h3>
-    <p class="paper-meta">
-      With D. Luo, L. Funcke, et al., April 2025,
-      <a href="https://arxiv.org/abs/2504.21828" target="_blank">arXiv</a>,
-      Phys. Rev. Lett. to appear
-    </p>
-    <ul>
-      <li>Establish that staggered fermion classical and quantum simulations fail to simulate novel topological phases.</li>
-      <li>Propose an alternative formulation with Wilson fermions, which faithfully captures topological phases.</li>
-      <li>Proof of concept exact diagonalization to show feasibility of simulation on near-term quantum devices.</li>
-    </ul>
-  </div>
-
-  <div class="paper">
-    <h3>Non-invertible defects on the worldsheet</h3>
-    <p class="paper-meta">
-      With P. Niro and K. Roumpedakis, September 2024,
-      Published in <a href="https://inspirehep.net/files/358fd350813bf31db1d761b20aa7f06e" target="_blank"><em>JHEP</em> 03 (2025) 164</a>
-    </p>
-  </div>
-
-  <div class="paper">
-    <h3>Approaching Argyres-Douglas Theories</h3>
-    <p class="paper-meta">
-      With Eric D'Hoker, June 2024,
-      Published in <a href="https://inspirehep.net/files/8282ebe3abb5433e0dc15f4261863173" target="_blank"><em>JHEP</em> 06 (2024) 082</a>
-    </p>
-  </div>
-
-  <h2>Selected Ongoing Research</h2>
-
-  <div class="paper">
-    <h3>CV-QAOA: Efficient Low-depth Continuous Quantum Optimization</h3>
-    <p class="paper-meta">With Di Luo and Leo Zhou</p>
-    <ul>
-      <li>CV-QAOA: novel low-overhead quantum optimization algorithm for tackling high-dimensional problems.</li>
-      <li>Versatility and ease of implementation inherited from the discrete QAOA.</li>
-      <li>Super-polynomial speed-ups in non-convex optimization relative to best known classical algorithms.</li>
-      <li>Provable instances of black-box query complexity separation between classical and quantum algorithms.</li>
-      <li>Semi-finalist: <strong>XPrize Quantum Applications</strong>, top 20 of 133 submissions.</li>
-    </ul>
-  </div>
-
-  <div class="paper">
-    <h3>Simulating Topological Phases on a Quantum Computer Using VQE</h3>
-    <p class="paper-meta">With Di Luo et al.</p>
-    <ul>
-      <li>VQE simulation of topological phases using the Hamiltonian formulation developed in <a href="https://arxiv.org/abs/2504.21828" target="_blank">arXiv:2504.21828</a>.</li>
-      <li>Prepare the ground state of Wilson fermions coupled to U(1) gauge fields using a QAOA-inspired ansatz.</li>
-      <li>Gives rigorous estimates of necessary gate-complexity.</li>
-      <li>Run simulation on real quantum device to experimentally check the phase diagram in <a href="https://arxiv.org/abs/2504.21828" target="_blank">arXiv:2504.21828</a>.</li>
-      <li>Demonstrate the ability of quantum computers to simulate novel topological phases of matter.</li>
-    </ul>
-  </div>
-
-  <h2>Contact</h2>
-  <p>Email: sriramsb@ucla.edu</p>
+  <p>
+    My research sits at the intersection of Hamiltonian lattice gauge theory and quantum computation. I am broadly interested in reformulating lattice gauge theories in ways that make them more amenable to quantum simulation, and in developing quantum algorithms and simulation methods for classically hard problems. My recent work has included VQE simulations for lattice gauge theory, QAOA-inspired methods for continuous optimization, and adiabatic state preparation. Earlier in my PhD, I worked on theoretical aspects of quantum field theory and string theory.
+  </p>
 </body>
 </html>
