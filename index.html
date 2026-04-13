@@ -22,52 +22,33 @@
     }
 
     nav a {
-      margin-right: 18px;
-      text-decoration: none;
-      color: #ffffff;
-      font-weight: 500;
-    }
+  margin-right: 18px;
+  text-decoration: none;
+  color: #8ab4f8;
+  font-weight: 500;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-      color: #dddddd;
-    }
-
+nav a:hover {
+  text-decoration: underline;
+  color: #a8c7fa;
+}
     a {
-      color: #ffffff;
-      text-decoration: underline;
-    }
+  color: #8ab4f8;
+  text-decoration: underline;
+}
 
-    a:hover {
-      color: #dddddd;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.15em;
-      color: #ffffff;
-    }
-
-    .subtitle {
-      color: #b0b0b0;
-      font-size: 1.05rem;
-      margin-bottom: 1.5em;
-    }
-
+a:hover {
+  color: #a8c7fa;
+}
     .hero {
       display: flex;
       align-items: flex-start;
-      gap: 32px;
+      gap: 40px;
       margin-bottom: 2em;
     }
 
-    .hero-text {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .hero-photo {
-      width: 240px;
+    .hero-left {
+      width: 260px;
       flex-shrink: 0;
     }
 
@@ -77,19 +58,46 @@
       display: block;
       border-radius: 14px;
       border: 1px solid #333333;
+      margin-bottom: 1em;
+    }
+
+    .hero-name {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin: 0 0 0.3em 0;
+      color: #ffffff;
+    }
+
+    .hero-subtitle {
+      color: #b0b0b0;
+      font-size: 1rem;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 0;
+      padding-top: 0.1em;
     }
 
     p {
+      margin-top: 0;
       margin-bottom: 1em;
     }
 
     @media (max-width: 760px) {
       .hero {
         flex-direction: column;
+        gap: 24px;
       }
 
-      .hero-photo {
+      .hero-left {
         width: 220px;
+      }
+
+      .hero-text {
+        padding-top: 0;
       }
     }
   </style>
@@ -104,14 +112,15 @@
   </nav>
 
   <div class="hero">
-    <div class="hero-photo">
-      <img src="portrait.jpeg" alt="Portrait of Sriram Bharadwaj">
+    <div class="hero-left">
+      <div class="hero-photo">
+        <img src="IMG_9917.jpeg" alt="Portrait of Sriram Bharadwaj">
+      </div>
+      <h1 class="hero-name">Sriram Bharadwaj</h1>
+      <p class="hero-subtitle">PhD Candidate in Theoretical Physics, UCLA</p>
     </div>
 
     <div class="hero-text">
-      <h1>Sriram Bharadwaj</h1>
-      <p class="subtitle">PhD Candidate in Theoretical Physics, UCLA</p>
-
       <p>
         I am a fifth-year PhD student in Theoretical Physics at UCLA, advised by Eric D'Hoker and Leo Zhou. Previously, I received an MSc in Mathematical and Theoretical Physics from the University of Oxford and a BS in Mathematics/Applied Science from UCLA.
       </p>
