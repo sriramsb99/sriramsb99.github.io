@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 900px;
+      max-width: 980px;
       margin: 50px auto;
       padding: 0 24px;
       line-height: 1.7;
@@ -24,13 +24,22 @@
     nav a {
       margin-right: 18px;
       text-decoration: none;
-      color: #8ab4f8;
+      color: #ffffff;
       font-weight: 500;
     }
 
     nav a:hover {
       text-decoration: underline;
-      color: #a8c7fa;
+      color: #dddddd;
+    }
+
+    a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #dddddd;
     }
 
     h1 {
@@ -42,20 +51,47 @@
     .subtitle {
       color: #b0b0b0;
       font-size: 1.05rem;
-      margin-bottom: 1.8em;
+      margin-bottom: 1.5em;
+    }
+
+    .hero {
+      display: flex;
+      align-items: flex-start;
+      gap: 32px;
+      margin-bottom: 2em;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .hero-photo {
+      width: 240px;
+      flex-shrink: 0;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 14px;
+      border: 1px solid #333333;
     }
 
     p {
       margin-bottom: 1em;
     }
 
-   a {
-  color: #8ab4f8;
-}
+    @media (max-width: 760px) {
+      .hero {
+        flex-direction: column;
+      }
 
-a:hover {
-  color: #a8c7fa;
-}
+      .hero-photo {
+        width: 220px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -67,19 +103,27 @@ a:hover {
     <a href="contact.html">Contact</a>
   </nav>
 
-  <h1>Sriram Bharadwaj</h1>
-  <p class="subtitle">PhD Candidate in Theoretical Physics, UCLA</p>
+  <div class="hero">
+    <div class="hero-photo">
+      <img src="portrait.jpeg" alt="Portrait of Sriram Bharadwaj">
+    </div>
 
-  <p>
-  I am a fifth-year PhD student in Theoretical Physics at UCLA. I am fortunate to be co-advised by Profs. Eric D'Hoker and Leo Zhou, and to have Prof. Di Luo as my academic mentor. Previously, I received an MSc in Mathematical and Theoretical Physics from the University of Oxford and a BS in Mathematics/Applied Science from UCLA.
- </p>
+    <div class="hero-text">
+      <h1>Sriram Bharadwaj</h1>
+      <p class="subtitle">PhD Candidate in Theoretical Physics, UCLA</p>
 
-  <p>
-    My research interests include Hamiltonian lattice gauge theory, quantum simulation, quantum algorithms, and quantum information theory. I am particularly interested in developing formulations of many-body quantum systems that are both physically faithful and amenable to quantum computation.
-  </p>
+      <p>
+        I am a fifth-year PhD student in Theoretical Physics at UCLA, advised by Eric D'Hoker and Leo Zhou. Previously, I received an MSc in Mathematical and Theoretical Physics from the University of Oxford and a BS in Mathematics/Applied Science from UCLA.
+      </p>
 
-  <p>
-    More details about my current projects can be found on the <a href="research.html">Research</a> page, and a list of publications is available on the <a href="publications.html">Publications</a> page.
-  </p>
+      <p>
+        My research lies at the intersection of Hamiltonian lattice gauge theory, quantum simulation, quantum algorithms, and quantum information theory. I am particularly interested in developing formulations of many-body quantum systems that are both physically faithful and amenable to quantum computation.
+      </p>
+
+      <p>
+        More details about my current projects can be found on the <a href="research.html">Research</a> page, and a list of publications is available on the <a href="publications.html">Publications</a> page.
+      </p>
+    </div>
+  </div>
 </body>
 </html>
