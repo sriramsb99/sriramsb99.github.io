@@ -7,9 +7,9 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 950px;
+      max-width: 980px;
       margin: 50px auto;
-      padding: 0 24px;
+      padding: 0 24px 48px 24px;
       line-height: 1.75;
       color: #e8e8e8;
       background: #111111;
@@ -33,33 +33,112 @@
       color: #a8c7fa;
     }
 
+    a {
+      color: #8ab4f8;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #a8c7fa;
+    }
+
     h1 {
-      font-size: 2.2rem;
-      margin-bottom: 1em;
+      font-size: 2.3rem;
+      margin-bottom: 0.6em;
       color: #ffffff;
     }
 
     h2 {
-      font-size: 1.3rem;
-      margin-top: 2em;
-      margin-bottom: 0.5em;
+      font-size: 1.4rem;
+      margin-top: 2.2em;
+      margin-bottom: 0.6em;
       color: #ffffff;
+      scroll-margin-top: 24px;
     }
 
     p {
       margin-bottom: 1em;
     }
 
-    a {
-  color: #8ab4f8;
-}
+    .intro {
+      margin-bottom: 1.8em;
+      max-width: 850px;
+    }
 
-a:hover {
-  color: #a8c7fa;
-}
+    .menu-block {
+      margin: 2em 0 2.4em 0;
+      padding: 1.2em 1.3em;
+      background: #161616;
+      border: 1px solid #2a2a2a;
+      border-radius: 14px;
+    }
+
+    .menu-title {
+      margin: 0 0 0.8em 0;
+      font-size: 1rem;
+      color: #b0b0b0;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .menu-card {
+      display: block;
+      padding: 0.95em 1em;
+      border: 1px solid #2f2f2f;
+      border-radius: 12px;
+      background: #1a1a1a;
+      text-decoration: none;
+      transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
+    }
+
+    .menu-card:hover {
+      border-color: #4a6fa8;
+      background: #1e1e1e;
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    .menu-card-title {
+      display: block;
+      color: #ffffff;
+      font-weight: 600;
+      margin-bottom: 0.25em;
+      font-size: 1.02rem;
+    }
+
+    .menu-card-text {
+      display: block;
+      color: #b0b0b0;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
 
     .section {
-      margin-bottom: 2em;
+      margin-bottom: 2.2em;
+      padding-top: 0.2em;
+      border-top: 1px solid #242424;
+    }
+
+    .section:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    @media (max-width: 760px) {
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      body {
+        padding: 0 20px 40px 20px;
+      }
     }
   </style>
 </head>
@@ -74,53 +153,80 @@ a:hover {
 
   <h1>Research</h1>
 
-  <div class="section">
+  <div class="intro">
     <p>
-      My research sits at the intersection of Hamiltonian lattice gauge theory, quantum computation, and quantum many-body physics. In broad strokes, I am interested in developing formulations of interacting quantum systems that are both faithful to the underlying physics and amenable to quantum simulation, while also studying the algorithmic and information-theoretic structures that govern their complexity.
+      My research lies at the intersection of Hamiltonian lattice gauge theory, quantum simulation, quantum algorithms, and quantum information theory. I am broadly interested in developing formulations of many-body quantum systems that are both physically faithful and amenable to quantum computation, and in understanding the mathematical and computational structures that govern their complexity.
     </p>
   </div>
 
-  <div class="section">
+  <div class="menu-block">
+    <p class="menu-title">Research Areas</p>
+    <div class="menu-grid">
+      <a class="menu-card" href="#hamiltonian-lattice-gauge-theories">
+        <span class="menu-card-title">Hamiltonian Lattice Gauge Theories</span>
+        <span class="menu-card-text">Topological phases, Wilson fermions, and gauge-invariant Hamiltonian formulations.</span>
+      </a>
+
+      <a class="menu-card" href="#quantum-simulations">
+        <span class="menu-card-title">Quantum Simulations</span>
+        <span class="menu-card-text">VQE, state preparation, and many-body quantum simulation for interacting systems.</span>
+      </a>
+
+      <a class="menu-card" href="#quantum-algorithms">
+        <span class="menu-card-title">Quantum Algorithms</span>
+        <span class="menu-card-text">Continuous optimization, CV-QAOA, and algorithmic questions in quantum computation.</span>
+      </a>
+
+      <a class="menu-card" href="#quantum-information-theory">
+        <span class="menu-card-title">Quantum Information Theory</span>
+        <span class="menu-card-text">Information-theoretic scaling laws, neural quantum states, and expressive power.</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="section" id="hamiltonian-lattice-gauge-theories">
     <h2>Hamiltonian Lattice Gauge Theories</h2>
     <p>
-      A central theme of my research is the Hamiltonian formulation of lattice gauge theories, especially in regimes where quantum simulation may provide access beyond standard classical methods. My work has focused in particular on (2+1)-dimensional lattice QED with Wilson fermions, where I study how topological phases are realized in the Hamiltonian formulation.
+      A central theme of my research is the Hamiltonian formulation of lattice gauge theories, especially in regimes where quantum simulation may offer access beyond standard classical methods. My recent work has focused on topological phases in (2+1)-dimensional lattice QED with Wilson fermions, with the goal of understanding how topological structure is realized in fully gauge-invariant Hamiltonian settings.
     </p>
     <p>
-      In recent work on topological phases in Hamiltonian lattice QED<sub>3</sub>, I studied how the choice of fermion discretization affects the emergence of topological response. In particular, our analysis shows that the commonly used staggered-fermion Hamiltonian formulation is constrained by an exact time-reversal symmetry and therefore does not realize nontrivial topological phases, while Wilson fermions naturally support topological regimes with nonzero Chern number. We then extended this framework to one- and two-flavor theories coupled to U(1) gauge fields, where the resulting phase structure includes Chern-insulating and quantum spin Hall type behavior, together with gauge-invariant diagnostics such as many-body Chern numbers and current correlators.
+      In particular, I have studied how the choice of fermion discretization affects the emergence of topological response. This work shows that the commonly used staggered-fermion Hamiltonian formulation is constrained by an exact time-reversal symmetry and therefore does not realize nontrivial topological phases, whereas Wilson fermions support topological regimes with nonzero Chern number. I have also worked on extensions of this framework to one- and two-flavor theories coupled to dynamical U(1) gauge fields, where the resulting phase structure includes topological response and gauge-invariant diagnostics such as many-body Chern numbers and current correlators.
     </p>
     <p>
-       A major goal of this work is to identify formulations of lattice gauge theory that capture genuine topological physics and can serve as realistic targets for near-term quantum simulations.
+      More broadly, I am interested in Hamiltonian lattice formulations that preserve gauge constraints microscopically while remaining suitable for exact diagonalization, variational methods, and eventual quantum simulation.
     </p>
   </div>
 
-  <div class="section">
+  <div class="section" id="quantum-simulations">
     <h2>Quantum Simulations</h2>
     <p>
-      I am interested in quantum simulation as a tool for studying many-body systems that are difficult to access with classical methods. 
+      I am interested in quantum simulation as a tool for studying many-body systems that are difficult to access with classical methods. Much of my recent work has centered on state preparation and variational approaches for strongly correlated systems, especially lattice gauge theories and coupled fermion-boson models.
     </p>
     <p>
-      Concretely, I am investigating VQE-based approaches to lattice gauge theory. Here the aim is to construct circuit ansätze and observables tailored to Hamiltonian gauge theories with dynamical matter, so that physically relevant states can be prepared and probed on quantum devices. This connects naturally with my work on Hamiltonian formulations of topological phases in lattice QED, where variational methods provide a possible route toward experimentally probing phase structure in (2+1)D lattice QED.
+      One direction of this research studies VQE-based approaches to lattice gauge theory, where the aim is to construct circuit ansätze and observables tailored to Hamiltonian gauge theories with dynamical matter. This connects naturally with my work on Hamiltonian formulations of topological phases in lattice QED, where variational methods provide a route toward probing phase structure and response in gauge-invariant Hilbert spaces.
     </p>
     <p>
-      A second direction concerns quantum state preparation for many-body systems more broadly, including adiabatic state preparation for unbounded Hamiltonian systems such as the Hubbard-Holstein system, lattice gauge theories, etc. In this setting, I am interested both in rigorous error analysis and in practical protocols for preparing ground states or low-energy states of interacting models. This work combines mathematical questions in adiabatic theory with the broader goal of developing efficient preparation methods for physically meaningful quantum simulations.
+      A second direction concerns quantum state preparation for many-body systems more broadly, including adiabatic state preparation for unbounded Hamiltonian systems and models such as the Hubbard-Holstein system. Here I am interested both in rigorous error analysis and in practical protocols for preparing low-energy states of interacting models.
     </p>
   </div>
 
-  <div class="section">
+  <div class="section" id="quantum-algorithms">
     <h2>Quantum Algorithms</h2>
     <p>
       On the algorithmic side, I am interested in the design of quantum methods for classically hard optimization and simulation problems. A current focus is continuous-variable QAOA, where the goal is to develop low-depth quantum optimization protocols for continuous problems that retain the flexibility and practical appeal of QAOA while extending it beyond discrete settings.
     </p>
     <p>
-      In this line of work, I study both algorithm design and complexity-theoretic questions. Concretely, we identify problem classes where continuous-variable quantum optimization can offer meaningful quantum advantage and analyzing query-complexity separation between classical and quantum optimization in the black-box setting.
+      In this line of work, I study both algorithm design and complexity-theoretic questions. This includes identifying problem classes where continuous-variable quantum optimization may offer meaningful advantages, understanding the resources required for implementation, and clarifying the relationship between physically motivated continuous dynamics and more abstract query-complexity separations.
+    </p>
+  </div>
 
-  <div class="section">
+  <div class="section" id="quantum-information-theory">
     <h2>Quantum Information Theory</h2>
     <p>
       I am also interested in quantum information-theoretic questions arising in many-body physics and machine learning. In recent work on neural quantum states, I studied how information-theoretic quantities can be used to characterize the representational complexity of many-body wavefunctions and the expressive power of machine-learning ansätze.
     </p>
     <p>
-      In particular, this work develops scaling laws that relate the growth of dephased or amplitude-based mutual information to the capacity required of autoregressive neural-network quantum states. These results help explain when neural-network representations can outperform more traditional tensor-network descriptions, especially for state families whose relevant correlations scale beyond area-law behavior. The broader goal is to develop principled ways of connecting physical structure, information-theoretic complexity, and the performance of modern learning architectures in quantum many-body problems.
+      In particular, this work develops scaling laws relating the growth of dephased or amplitude-based mutual information to the capacity required of autoregressive neural-network quantum states. These results help explain when neural-network representations can outperform more traditional tensor-network descriptions, especially for state families whose relevant correlations scale beyond area-law behavior.
     </p>
   </div>
 </body>
